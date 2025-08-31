@@ -1,0 +1,467 @@
+{
+  "name": "bifrost",
+  "displayName": "Bifröst",
+  "description": "A VSCode Theme with refined color mappings for the Odin Programming Language and GLSL",
+  "version": "1.0.0",
+  "publisher": "TheCodeTherapy",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/TheCodeTherapy/bifrost/issues"
+  },
+  "homepage": "https://github.com/TheCodeTherapy/bifrost",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/TheCodeTherapy/bifrost"
+  },
+  "engines": {
+    "vscode": "^1.76.0"
+  },
+  "activationEvents": [
+    "onStartupFinished"
+  ],
+  "main": "./out/extension.js",
+  "browser": "./out/web/extension.js",
+  "categories": [
+    "Themes"
+  ],
+  "extensionKind": [
+    "ui",
+    "workspace"
+  ],
+  "eslintConfig": {
+    "extends": [
+      "@mskelton",
+      "@mskelton/eslint-config/typescript"
+    ],
+    "plugins": [
+      "html"
+    ],
+    "rules": {
+      "sort/imports": "off"
+    }
+  },
+  "scripts": {
+    "docs": "docsify serve docs",
+    "build:theme": "ts-node --project scripts/tsconfig.json scripts/generate-theme.ts",
+    "build:ts": "tsc -p src",
+    "build": "yarn build:sass && yarn build:theme && yarn build:ts",
+    "lint": "eslint . --ext .ts",
+    "lint:fix": "eslint . --ext .ts --fix",
+    "watch:theme": "nodemon ./scripts/generate-theme.ts",
+    "watch:ts": "yarn build:ts -w",
+    "vscode:prepublish": "yarn build && yarn package-web",
+    "package": "vsce package",
+    "build:sass": "yarn sass --no-source-map scss:styles && yarn sass --no-source-map scss:styles/origin",
+    "compile-web": "webpack --config ./build/web-extension.webpack.config.js",
+    "watch-web": "webpack --watch --config ./build/web-extension.webpack.config.js",
+    "package-web": "webpack --mode production --devtool hidden-source-map --config ./build/web-extension.webpack.config.js"
+  },
+  "prettier": {
+    "singleQuote": true,
+    "semi": false
+  },
+  "contributes": {
+    "markdown.previewStyles": [
+      "./styles/base-inside.css",
+      "./styles/markdown-inside.css",
+      "./styles/atom-one-dark-inside.css"
+    ],
+    "commands": [
+      {
+        "command": "bifrost.showChangelog",
+        "title": "%description.bifrost.showChangelog%",
+        "category": "Bifröst"
+      },
+      {
+        "command": "bifrost.setVivid",
+        "title": "%description.bifrost.setVivid%",
+        "category": "Bifröst"
+      },
+      {
+        "command": "bifrost.cancelVivid",
+        "title": "%description.bifrost.cancelVivid%",
+        "category": "Bifröst"
+      },
+      {
+        "command": "bifrost.setItalic",
+        "title": "%description.bifrost.setItalic%",
+        "category": "Bifröst"
+      },
+      {
+        "command": "bifrost.cancelItalic",
+        "title": "%description.bifrost.cancelItalic%",
+        "category": "Bifröst"
+      },
+      {
+        "command": "bifrost.setBold",
+        "title": "%description.bifrost.setBold%",
+        "category": "Bifröst"
+      },
+      {
+        "command": "bifrost.cancelBold",
+        "title": "%description.bifrost.cancelBold%",
+        "category": "Bifröst"
+      }
+    ],
+    "themes": [
+      {
+        "label": "Bifröst",
+        "uiTheme": "vs-dark",
+        "path": "./themes/Bifrost.json"
+      },
+      {
+        "label": "Bifröst Flat",
+        "uiTheme": "vs-dark",
+        "path": "./themes/Bifrost-flat.json"
+      },
+      {
+        "label": "Bifröst Darker",
+        "uiTheme": "vs-dark",
+        "path": "./themes/Bifrost-darker.json"
+      },
+      {
+        "label": "Bifröst Mix",
+        "uiTheme": "vs-dark",
+        "path": "./themes/Bifrost-mix.json"
+      },
+      {
+        "label": "Bifröst Night Flat",
+        "uiTheme": "vs-dark",
+        "path": "./themes/Bifrost-night-flat.json"
+      }
+    ],
+    "configuration": {
+      "title": "Bifröst",
+      "properties": {
+        "bifrost.editorTheme": {
+          "type": "string",
+          "default": "Bifröst",
+          "markdownDescription": "%description.bifrost.editorTheme%",
+          "enum": [
+            "Bifröst",
+            "Bifröst Flat",
+            "Nord",
+            "Solarized",
+            "Solarized Flat",
+            "Shadow",
+            "Panda",
+            "Ayu",
+            "VS Code",
+            "Just Black",
+            "Bifröst Darker",
+            "Bifröst Mix",
+            "Ocean",
+            "Tokyo",
+            "Retro",
+            "Gnome",
+            "Dark Modern",
+            "Bifröst Night Flat"
+          ]
+        },
+        "bifrost.italic": {
+          "type": "boolean",
+          "default": true,
+          "description": "%description.bifrost.italic%"
+        },
+        "bifrost.vivid": {
+          "type": "boolean",
+          "default": false,
+          "markdownDescription": "%description.bifrost.vivid%"
+        },
+        "bifrost.bold": {
+          "type": "boolean",
+          "default": false,
+          "markdownDescription": "%description.bifrost.bold%"
+        },
+        "bifrost.markdownStyle": {
+          "type": "boolean",
+          "default": true,
+          "description": "%description.bifrost.markdownStyle%"
+        },
+        "bifrost.color": {
+          "type": "object",
+          "scope": "resource",
+          "default": {
+            "arithmeticOperator": "",
+            "enumConstants": "",
+            "assignmentOperators": "",
+            "blockDelimiters": "",
+            "constants": "",
+            "markupElements": "",
+            "embeddedCodeDelimiters": "",
+            "illegalSyntax": "",
+            "functionNames": "",
+            "illegalTokens ": "",
+            "comments": "",
+            "numericConstants": "",
+            "pointerOperators": "",
+            "storageTypes": "",
+            "strings": "",
+            "typeAnnotation": "",
+            "variables": "",
+            "relationalOperators": "",
+            "typeNames": "",
+            "namespace": "",
+            "enumType": "",
+            "structType": "",
+            "parameters": "",
+            "members": "",
+            "keywords": "",
+            "modifiers": "",
+            "properties": "",
+            "methods": "",
+            "glslPreprocessorDirective": "",
+            "glslNumericConstant": "",
+            "glslStorageModifier": "",
+            "glslStorageType": "",
+            "glslConstModifier": "",
+            "glslAssignmentOperator": "",
+            "glslArithmeticOperator": "",
+            "glslSupportFunction": "",
+            "glslSupportVariable": "",
+            "glslPrecisionModifier": "",
+            "glslBitwiseOperator": "",
+            "glslComparativeOperator": "",
+            "glslIncrementDecrementOperator": "",
+            "glslDefaultText": ""
+          },
+          "properties": {
+            "arithmeticOperator": {
+              "type": "string",
+              "default": ""
+            },
+            "assignmentOperators": {
+              "type": "string",
+              "default": ""
+            },
+            "blockDelimiters": {
+              "type": "string",
+              "default": ""
+            },
+            "constants": {
+              "type": "string",
+              "default": ""
+            },
+            "variables": {
+              "type": "string",
+              "default": ""
+            },
+            "markupElements": {
+              "type": "string",
+              "default": ""
+            },
+            "illegalSyntax": {
+              "type": "string",
+              "default": ""
+            },
+            "strings": {
+              "type": "string",
+              "default": ""
+            },
+            "illegalTokens ": {
+              "type": "string",
+              "default": ""
+            },
+            "comments": {
+              "type": "string",
+              "default": ""
+            },
+            "pointerOperators": {
+              "type": "string",
+              "default": ""
+            },
+            "functionNames": {
+              "type": "string",
+              "default": ""
+            },
+            "storageTypes": {
+              "type": "string",
+              "default": ""
+            },
+            "numericConstants": {
+              "type": "string",
+              "default": ""
+            },
+            "embeddedCodeDelimiters": {
+              "type": "string",
+              "default": ""
+            },
+            "typeAnnotation": {
+              "type": "string",
+              "default": ""
+            },
+            "typeNames": {
+              "type": "string",
+              "default": ""
+            },
+            "namespace": {
+              "type": "string",
+              "default": ""
+            },
+            "enumType": {
+              "type": "string",
+              "default": ""
+            },
+            "structType": {
+              "type": "string",
+              "default": ""
+            },
+            "parameters": {
+              "type": "string",
+              "default": ""
+            },
+            "members": {
+              "type": "string",
+              "default": ""
+            },
+            "keywords": {
+              "type": "string",
+              "default": ""
+            },
+            "modifiers": {
+              "type": "string",
+              "default": ""
+            },
+            "properties": {
+              "type": "string",
+              "default": ""
+            },
+            "methods": {
+              "type": "string",
+              "default": ""
+            },
+            "glslPreprocessorDirective": {
+              "type": "string",
+              "default": ""
+            },
+            "glslNumericConstant": {
+              "type": "string",
+              "default": ""
+            },
+            "glslStorageModifier": {
+              "type": "string",
+              "default": ""
+            },
+            "glslStorageType": {
+              "type": "string",
+              "default": ""
+            },
+            "glslConstModifier": {
+              "type": "string",
+              "default": ""
+            },
+            "glslAssignmentOperator": {
+              "type": "string",
+              "default": ""
+            },
+            "glslArithmeticOperator": {
+              "type": "string",
+              "default": ""
+            },
+            "glslSupportFunction": {
+              "type": "string",
+              "default": ""
+            },
+            "glslSupportVariable": {
+              "type": "string",
+              "default": ""
+            },
+            "glslPrecisionModifier": {
+              "type": "string",
+              "default": ""
+            },
+            "glslBitwiseOperator": {
+              "type": "string",
+              "default": ""
+            },
+            "glslComparativeOperator": {
+              "type": "string",
+              "default": ""
+            },
+            "glslIncrementDecrementOperator": {
+              "type": "string",
+              "default": ""
+            },
+            "glslDefaultText": {
+              "type": "string",
+              "default": ""
+            }
+          },
+          "additionalProperties": false,
+          "markdownDescription": "Code highlight color, read more at [GitHub repository](https://github.com/thecodetherapy/bifrost)"
+        }
+      }
+    }
+  },
+  "icon": "icon.png",
+  "keywords": [
+    "bifrost",
+    "vscode",
+    "vscodium",
+    "cursor",
+    "theme",
+    "editor",
+    "color scheme",
+    "odin",
+    "odin programming language"
+  ],
+  "devDependencies": {
+    "@babel/core": "^7.0.0",
+    "@babel/eslint-parser": "^7.0.0",
+    "@mskelton/eslint-config": "7.1.0",
+    "@mskelton/prettier-config": "5.1.1",
+    "@types/node": "16.11.33",
+    "@types/vscode": "1.76.0",
+    "@typescript-eslint/eslint-plugin": "^5.0.0",
+    "@typescript-eslint/parser": "^5.0.0",
+    "all-contributors-cli": "6.20.0",
+    "docsify-cli": "4.4.4",
+    "eslint": "8.14.0",
+    "eslint-plugin-html": "6.2.0",
+    "eslint-plugin-prettier": "4.0.0",
+    "eslint-plugin-sort": "2.4.0",
+    "nodemon": "2.0.16",
+    "path-browserify": "1.0.1",
+    "prettier": "2.6.2",
+    "process": "0.11.10",
+    "sass": "1.50.1",
+    "ts-loader": "9.3.0",
+    "ts-node": "10.7.0",
+    "typescript": "4.6.4",
+    "util": "0.12.5",
+    "vsce": "2.7.0",
+    "webpack": "5.72.0",
+    "webpack-cli": "4.9.2"
+  },
+  "galleryBanner": {
+    "color": "#2d323b",
+    "theme": "dark"
+  },
+  "dependencies": {
+    "@types/marked": "^4.0.1",
+    "marked": "4"
+  },
+  "capabilities": {
+    "untrustedWorkspaces": {
+      "supported": true
+    },
+    "virtualWorkspaces": true
+  },
+  "badges": [
+    {
+      "url": "https://vsmarketplacebadges.dev/version/TheCodeTherapy.bifrost.png",
+      "href": "https://marketplace.visualstudio.com/items/TheCodeTherapy.bifrost",
+      "description": "Extension version"
+    },
+    {
+      "url": "https://vsmarketplacebadges.dev/installs/TheCodeTherapy.bifrost.png",
+      "href": "https://marketplace.visualstudio.com/items/TheCodeTherapy.bifrost",
+      "description": "Extension installs"
+    },
+    {
+      "url": "https://vsmarketplacebadges.dev/rating/TheCodeTherapy.bifrost.png",
+      "href": "https://marketplace.visualstudio.com/items/TheCodeTherapy.bifrost",
+      "description": "Extension Rating"
+    }
+  ]
+}

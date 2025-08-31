@@ -1,0 +1,14 @@
+{
+  "description.bifrost.editorTheme": "Switch to different editor theme",
+  "description.bifrost.italic": "Toggle italics on some scopes",
+  "description.bifrost.vivid": "Toggle vivid colors",
+  "description.bifrost.bold": "Toggle bold on some scopes",
+  "description.bifrost.showChangelog": "Show changelog",
+  "description.bifrost.setVivid": "Turn on vivid colors",
+  "description.bifrost.cancelVivid": "Turn off vivid colors",
+  "description.bifrost.setBold": "Turn on bold code on some scopes",
+  "description.bifrost.cancelBold": "Turn off bold code on some scopes",
+  "description.bifrost.setItalic": "Turn on italic code on some scopes",
+  "description.bifrost.cancelItalic": "Turn off italic code on some scopes",
+  "description.bifrost.markdownStyle": "Toggle Markdown style"
+}

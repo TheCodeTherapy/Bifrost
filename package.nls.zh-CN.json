@@ -1,0 +1,14 @@
+{
+    "description.bifrost.editorTheme": "设置不同编辑器主题",
+    "description.bifrost.italic": "设置部分代码为斜体",
+    "description.bifrost.vivid": "设置色彩为 vivid",
+    "description.bifrost.bold": "设置部分代码为粗体",
+    "description.bifrost.showChangelog": "打开变更日志",
+    "description.bifrost.setVivid": "设置色彩为 vivid",
+    "description.bifrost.cancelVivid": "取消设置色彩为 vivid",
+    "description.bifrost.setBold": "设置部分代码为粗体",
+    "description.bifrost.cancelBold": "取消设置部分代码为粗体",
+    "description.bifrost.setItalic": "设置部分代码为斜体",
+    "description.bifrost.cancelItalic": "取消设置部分代码为斜体",
+    "description.bifrost.markdownStyle": "使用内置的 Markdown 样式"
+}
