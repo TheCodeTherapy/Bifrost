@@ -1,5 +1,5 @@
 {
-  "name": "bifrost",
+  "name": "bitfrost-code-theme",
   "displayName": "Bifröst",
   "description": "A VSCode Theme with refined color mappings for the Odin Programming Language and GLSL",
   "version": "1.0.0",
@@ -449,18 +449,18 @@
   },
   "badges": [
     {
-      "url": "https://vsmarketplacebadges.dev/version/TheCodeTherapy.bifrost.png",
-      "href": "https://marketplace.visualstudio.com/items/TheCodeTherapy.bifrost",
+      "url": "https://vsmarketplacebadges.dev/version/TheCodeTherapy.bitfrost-code-theme.png",
+      "href": "https://marketplace.visualstudio.com/items/TheCodeTherapy.bitfrost-code-theme",
       "description": "Extension version"
     },
     {
-      "url": "https://vsmarketplacebadges.dev/installs/TheCodeTherapy.bifrost.png",
-      "href": "https://marketplace.visualstudio.com/items/TheCodeTherapy.bifrost",
+      "url": "https://vsmarketplacebadges.dev/installs/TheCodeTherapy.bitfrost-code-theme.png",
+      "href": "https://marketplace.visualstudio.com/items/TheCodeTherapy.bitfrost-code-theme",
       "description": "Extension installs"
     },
     {
-      "url": "https://vsmarketplacebadges.dev/rating/TheCodeTherapy.bifrost.png",
-      "href": "https://marketplace.visualstudio.com/items/TheCodeTherapy.bifrost",
+      "url": "https://vsmarketplacebadges.dev/rating/TheCodeTherapy.bitfrost-code-theme.png",
+      "href": "https://marketplace.visualstudio.com/items/TheCodeTherapy.bitfrost-code-theme",
       "description": "Extension Rating"
     }
   ]

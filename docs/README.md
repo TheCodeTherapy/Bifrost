@@ -1,7 +1,7 @@
 # Bifröst
 
 ## About
-[Bifröst](https://marketplace.visualstudio.com/items?itemName=TheCodeTherapy.bifrost) is an enhanced VS Code theme featuring comprehensive language support, refined color mappings, and specialized GLSL syntax highlighting. Originally forked from the popular OneDark Pro theme, Bifröst has evolved into a fully independent theme optimized for modern development workflows.
+[Bifröst](https://marketplace.visualstudio.com/items?itemName=TheCodeTherapy.bitfrost-code-theme) is an enhanced VS Code theme featuring comprehensive language support, refined color mappings, and specialized GLSL syntax highlighting. Originally forked from the popular OneDark Pro theme, Bifröst has evolved into a fully independent theme optimized for modern development workflows.
 
 # Screenshots
 

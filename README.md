@@ -1,4 +1,4 @@
-# [Bifröst](https://marketplace.visualstudio.com/items?itemName=thecodetherapy.bifrost)
+# [Bifröst](https://marketplace.visualstudio.com/items?itemName=thecodetherapy.bitfrost-code-theme)
 
 ## [GitHub Repo](https://github.com/thecodetherapy/bifrost)
 
