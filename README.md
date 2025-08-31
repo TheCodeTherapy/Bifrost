@@ -162,5 +162,4 @@ Example of customizing semantic colors in settings.json:
 Please check the official documentation,
 [Theme Color Reference](https://code.visualstudio.com/docs/getstarted/theme-color-reference) and
 [Theme Color](https://code.visualstudio.com/docs/getstarted/themes), for more helpful information.
-
 [More info](https://code.visualstudio.com/updates/v1_15#_user-definable-syntax-highlighting-colors)
