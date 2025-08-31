@@ -2,7 +2,7 @@
   "name": "bitfrost-code-theme",
   "displayName": "Bifröst",
   "description": "A VSCode Theme with refined color mappings for the Odin Programming Language and GLSL",
-  "version": "1.0.1",
+  "version": "1.0.2",
   "publisher": "TheCodeTherapy",
   "license": "MIT",
   "bugs": {

@@ -6,6 +6,33 @@ Enhanced theme with improved semantic token support and refined color mappings f
 
 Bifröst is a fork of the popular OneDark Pro theme, with a complete update on the color-scheme and additions to the semantic token support I wanted (especially for Odin language and GLSL shaders), for improved color differentiation and refined visual hierarchy.
 
+## Screenshots
+
+### Bifröst (Default)
+![Bifröst Odin](screenshots/bifrost_odin.png)
+
+![Bifröst GLSL](screenshots/bifrost_glsl.png)
+
+### Bifröst Darker
+![Bifröst Darker Odin](screenshots/bifrost_darker_odin.png)
+
+![Bifröst Darker GLSL](screenshots/bifrost_darker_glsl.png)
+
+### Bifröst Flat
+![Bifröst Flat Odin](screenshots/bifrost_flat_odin.png)
+
+![Bifröst Flat GLSL](screenshots/bifrost_flat_glsl.png)
+
+### Bifröst Mix
+![Bifröst Mix Odin](screenshots/bifrost_mix_odin.png)
+
+![Bifröst Mix GLSL](screenshots/bifrost_mix_glsl.png)
+
+### Bifröst Night Flat
+![Bifröst Night Flat Odin](screenshots/bifrost_night_flat_odin.png)
+
+![Bifröst Night Flat GLSL](screenshots/bifrost_night_flat_glsl.png)
+
 ### Suggest Editor Settings
 ```
   "editor.fontSize": 17,
